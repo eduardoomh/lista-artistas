@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import {useState, useMemo} from "react";
+import Navigation from "router/Navigation";
+import ListContext from "context/ListContext";
 import './App.css';
 
 function App() {
+  const [list, setList] = useState([]);
+
+  const update = (data) => {
+    setList(data);
+  }
+
+  const listContextValue = useMemo(
+    () => ({
+      list,
+      update
+  
+    }),
+    [list]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div className="App">
+          <div>
+          <ListContext.Provider value={listContextValue}>
+            <Navigation />  
+          </ListContext.Provider>
+          </div>      
+      </div>
+  
   );
 }
 
