@@ -26,17 +26,9 @@ useEffect(() => {
                 let namesArray = [];
                 let newArtistArray = [];
                 const childnodes = Array.apply(null,evt.to.childNodes);
-                childnodes.map(e => {
-                    namesArray.push(e.id);
-                })
+                childnodes.map(e => namesArray.push(e.id))
 
-
-                namesArray.map(n => {
-                    let itemFind = list.find(li => li.nombre === n)
-                    newArtistArray.push(itemFind);
-                })
-
-                console.log(newArtistArray, "la buena")
+                namesArray.map(n => newArtistArray.push(list.find(li => li.nombre === n)))
 
                 
                 try{
@@ -57,7 +49,7 @@ useEffect(() => {
             }
         });
     }
-}, [list]);
+}, [list, collectionFirebase, update]);
 
     return (
         <div >
@@ -67,7 +59,7 @@ useEffect(() => {
                 {
                     list?.length > 0  ? list.map(li => (
                         <li key={li.nombre} id={li.nombre}>
-                            <img src={li.imagen} width={40} />
+                            <img src={li.imagen} width={40} alt={li.nombre} />
                             <h2>{li.nombre}</h2>
                             <div>
                                 <button onClick={() => navigateTo(li.nombre)}>Ver Artista</button>

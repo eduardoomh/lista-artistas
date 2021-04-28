@@ -17,7 +17,7 @@ export default function Artista() {
    
         }
 
-    }, [listFetch, artist])
+    }, [listFetch, artist, artistName, findArtist, location.pathname])
 
     useEffect(() => {
         setArtistName(location.pathname.substring(10).replace('-', ' '));
@@ -27,7 +27,7 @@ export default function Artista() {
    
         }
 
-    }, [listFetch, artist])
+    }, [listFetch, artist, artistName, findArtistContext, list, location.pathname])
 
     return (
         <div>
