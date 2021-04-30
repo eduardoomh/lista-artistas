@@ -1,6 +1,6 @@
   
 import Home from "pages/Home";
-import List from "pages/List";
+import MasterList from "pages/MasterList";
 import Artista from "pages/Artista";
 import ErrorComponent from "pages/Error";
 import MainLayout from "components/layout/MainLayout";
@@ -21,7 +21,7 @@ export const rutas = [
     {
         path: "/lista",
         layout: MainLayout,
-        component: List,
+        component: MasterList,
         exact: true
     },
     {

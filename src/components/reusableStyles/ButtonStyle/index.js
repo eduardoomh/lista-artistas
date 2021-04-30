@@ -4,11 +4,11 @@ const ButtonStyle = styled.button`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-width: 10rem;
-    height: 3.5rem;
+    min-width: ${props => props.width ? props.width : '10rem'};
+    height: ${props => props.height ? props.height : '3.5rem'};
     border-radius: 6px;
     border: none;
-    font-size: 1.2rem;
+    font-size: ${props => props.size ? props.size : '1.2rem'};
     background-color:  var(--sixth);
     color: white;
     font-family: 'Source Serif Pro', serif;
