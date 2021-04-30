@@ -28,7 +28,7 @@ export default function MasterList() {
         <MainContainerStyle>
             <PreviousPage path='/'>Volver al menú</PreviousPage>
             <DivContainer>
-                <TitleStyle size={'4rem'}>LISTA <br /> MASTER</TitleStyle>
+                <TitleStyle size={'4rem'}>LISTA <br className="title-word-break" /> MASTER</TitleStyle>
                 <ParagrahpStyle semibold size={'1.5rem'}>
                     Estos son los artistas mas determinantes de mis playlists, ordenados del mejor al peor.
                     <br />Arrastra y suelta los elementos de la lista si quieres divertirte un rato.

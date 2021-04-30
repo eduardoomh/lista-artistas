@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 
 const ParagraphStyle = styled.p`
   font-size: ${props => props.size ? props.size : '1.2rem'};
-  font-weight: ${props => props.semibold ? 'semibold': 'normal'};
+  font-weight: ${props => props.semibold ? '500': 'normal'};
   color: ${props => props.color ? props.color : 'black'};
   padding: 1rem;
 

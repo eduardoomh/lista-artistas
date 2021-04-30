@@ -3,6 +3,20 @@ import styled, {css} from 'styled-components';
 export const OlStyle = styled.ol`
     margin: 0;
     list-style: none;
+
+    @media (min-width: 1000px){
+        margin: auto;
+        width: 45rem;
+    }
+
+    .move-sortable{
+        background-color: white;
+        border: 2px solid var(--sixth);
+        border-radius: 12px;
+        li{
+            margin: 1rem;
+        }
+    }
 `;
 
 export const LiStyle = styled.li`
@@ -30,6 +44,16 @@ export const LiStyle = styled.li`
         height: 3.5rem;
         width: 2rem;
     }
+
+    &:hover{
+        cursor: move;
+    }
+
+    @media (min-width: 1000px){
+        grid-template-columns: .7rem 3.5rem  1fr 11rem;
+        width: 45rem;
+        height: 4.5rem;
+    }
 `;
 
 export const ImgContainer = styled.div`
@@ -40,6 +64,11 @@ export const ImgContainer = styled.div`
     align-items: center;
     width: 3.5rem;
     height: 3.5rem;
+
+    @media (min-width: 1000px){
+        width: 4.5rem;
+        height: 4.5rem;
+    }
 `;
 
 export const PStyle = styled.p`
@@ -51,6 +80,12 @@ export const PStyle = styled.p`
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--sixth);
+
+    @media (min-width: 1000px){
+        font-size: 1.4rem;
+        height: 4.5rem;
+        padding-left: 2rem;
+    }
 
 `;
 

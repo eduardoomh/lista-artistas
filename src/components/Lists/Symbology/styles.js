@@ -7,6 +7,10 @@ export const UlStyle = styled.ul`
     margin: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
+
+    @media (min-width: 1000px){
+        width: 42rem;
+    }
 `;
 
 export const LiStyle = styled.li`

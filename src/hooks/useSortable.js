@@ -5,7 +5,9 @@ export default function useSortable() {
     const makeSortable = (ref, list, collection) => {
         new Sortable(ref.current, {
             group: 'shared', // set both lists to same group
-            animation: 150,
+            animation: 200,
+            easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+            chosenClass: 'move-sortable',
 
             onEnd: (evt) => {
                 let namesArray = [];
