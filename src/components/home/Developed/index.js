@@ -1,15 +1,17 @@
 import React from 'react'
 import useImagesAWS from "hooks/useImagesAWS";
 import { DiGithubBadge } from "react-icons/di";
+import useUrls from "hooks/useUrls";
 import {DivMainContainer, DivContainerStyle, UlContainerStyle} from "./styles";
 
 export default function Developed() {
     const {react, firebase, vercel} = useImagesAWS();
-
+    const {github} = useUrls();
+ 
     return (
         <DivMainContainer>
            <DivContainerStyle>
-               <DiGithubBadge size={64} />
+               <a href={github} target="_blank" rel="noopener noreferrer"><DiGithubBadge size={64} /></a>
                <p>App desarrollada con</p>
            </DivContainerStyle>
            <UlContainerStyle>

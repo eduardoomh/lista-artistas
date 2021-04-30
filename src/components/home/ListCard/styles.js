@@ -3,7 +3,11 @@ import styled from 'styled-components';
 export const ArticleStyle = styled.article`
     border-radius: 6px;
     background-color: var(--third);
-    margin: 4.5rem 0;
+    margin: 4.5rem .5rem;
+
+    @media (min-width: 600px){
+        width: 20rem;
+    }
 `;
 
 export const AvailableSectionStyle  = styled.section`

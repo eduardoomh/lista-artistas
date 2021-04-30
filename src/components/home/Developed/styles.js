@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
 export const DivMainContainer = styled.div`
-  
+    margin-bottom: 6rem;
+
+    @media (min-width: 500px){
+        width: 400px;
+        margin: auto;
+        margin-bottom: 6rem;
+    }
 `;
 
 export const DivContainerStyle = styled.div`
@@ -14,6 +20,10 @@ export const DivContainerStyle = styled.div`
         text-align: center;
         font-size: 1.2rem;
         font-weight: bold;
+    }
+    
+    a{
+        color: inherit;
     }
 `;
 

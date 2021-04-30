@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 const ButtonStyle = styled.button`
     display: flex;
@@ -13,7 +13,14 @@ const ButtonStyle = styled.button`
     color: white;
     font-family: 'Source Serif Pro', serif;
     opacity: ${props => props.disabled ? 0.5 : 1};
-    
+
+    ${props => !props.disabled && css`
+
+        &:hover{
+            cursor: pointer; 
+            background-color: var(--fifth);      
+        }
+    `}
 
 `;
 
