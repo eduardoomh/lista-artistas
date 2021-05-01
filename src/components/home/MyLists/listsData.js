@@ -4,7 +4,7 @@
         title: "LISTA MASTER",
         available: true,
         description: " Los mejores 20 artistas que protagonizaron la mayoría de mis playlists reunidos en una sola lista.",
-        path: "/lista",
+        path: "/lista-master",
         images: [
             {
                 url: "https://firebasestorage.googleapis.com/v0/b/artistlist-46971.appspot.com/o/images-artist%2Fwishlist.jpg?alt=media&token=2a794cfd-6305-45fc-9fb3-7e76db05137d",
@@ -25,7 +25,7 @@
         title: "LISTA B",
         available: false,
         description: " Los mejores 20 artistas que protagonizaron la mayoría de mis playlists reunidos en una sola lista.",
-        path: "/lista",
+        path: "/lista-master",
         images: [
             {
                 url: "https://firebasestorage.googleapis.com/v0/b/artistlist-46971.appspot.com/o/images-artist%2Fnoahcyrus.jpg?alt=media&token=808605eb-700c-4f86-bd2c-182130d751cb",
@@ -46,7 +46,7 @@
         title: "LISTA C",
         available: false,
         description: " Los mejores 20 artistas que protagonizaron la mayoría de mis playlists reunidos en una sola lista.",
-        path: "/lista",
+        path: "/lista-master",
         images: [
             {
                 url: "https://firebasestorage.googleapis.com/v0/b/artistlist-46971.appspot.com/o/images-artist%2Fsadalex.jpg?alt=media&token=f8656487-3ef3-4bc4-91bd-ed41faa4c5a4",

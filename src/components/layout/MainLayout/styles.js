@@ -17,7 +17,7 @@ export const PStyle = styled.p`
     }
 
     @media (min-width: 600px){
-        margin-top: 0;
+        margin-top: 3rem;
     }
 `;
 

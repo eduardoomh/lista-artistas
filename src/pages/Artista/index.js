@@ -2,12 +2,20 @@ import React, {useState, useEffect} from 'react'
 import {useLocation} from "react-router-dom";
 import useArtistCollection from "hooks/useArtistCollection";
 import useListContext from "hooks/useListContext";
+import ArtistInfo from "components/Artista/ArtistInfo";
+import MusicInfo from "components/Artista/MusicInfo";
+import {MainContainerStyle} from "./styles";
 
 export default function Artista() {
     const [artistName, setArtistName] = useState('')
     const location = useLocation();
     const {list: listFetch, artist, findArtist, findArtistContext} = useArtistCollection();
     const {list} = useListContext();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
 
     useEffect(() => {
         setArtistName(location.pathname.substring(10).replace('-', ' '));
@@ -24,17 +32,25 @@ export default function Artista() {
 
         if(list.length > 0 ){
             findArtistContext(artistName, list)
+            
    
         }
 
     }, [listFetch, artist, artistName, findArtistContext, list, location.pathname])
 
     return (
-        <div>
-            <p>{artistName}</p>
-            <div>
-                {artist?.descripcion}
-            </div>
-           </div>
+        <MainContainerStyle>
+            <ArtistInfo 
+                path={artist?.pertenece_a} 
+                nombre={artist?.nombre}
+                descripcion={artist?.descripcion} 
+                imagen={artist?.imagen}
+            />
+            <MusicInfo 
+                nombre={artist?.nombre} 
+                canciones={artist?.canciones}
+                imagen={artist?.imagen}
+            />
+        </MainContainerStyle>
     )
 }

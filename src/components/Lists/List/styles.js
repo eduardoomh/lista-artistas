@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components';
 
 export const OlStyle = styled.ol`
+    min-height: 50vh;
     margin: 0;
     list-style: none;
 

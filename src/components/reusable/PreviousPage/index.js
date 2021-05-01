@@ -9,6 +9,7 @@ export default function PreviousPage(props) {
 
     const gotoPage = () => {
         history.push(path);
+        console.log(path)
     }
 
     return (

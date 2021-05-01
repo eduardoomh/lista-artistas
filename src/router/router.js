@@ -19,7 +19,7 @@ export const rutas = [
         exact: true
     },
     {
-        path: "/lista",
+        path: "/lista-master",
         layout: MainLayout,
         component: MasterList,
         exact: true
