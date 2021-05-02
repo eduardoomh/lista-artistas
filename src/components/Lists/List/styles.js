@@ -38,12 +38,18 @@ export const LiStyle = styled.li`
         flex-direction: column;
         justify-content: center;
         color:  var(--sixth);
-        font-size: 2.2rem;
+        font-size: 1.6rem;
         font-weight: 600;
         margin-left: -2rem;
         margin-top: -3.5rem;
         height: 3.5rem;
         width: 2rem;
+
+        @media (min-width: 1000px){
+            width: 2.2rem;
+            font-size: 2.2rem;
+            margin-left: -3rem;
+        }
     }
 
     &:hover{

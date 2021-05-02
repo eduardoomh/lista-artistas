@@ -7,7 +7,7 @@ import Button from "components/reusable/Button";
 import { OlStyle, LiStyle, ImgContainer, PStyle, SpanStyle, DivButton } from "./styles";
 
 export default function List(props) {
-    const { list, collectionFirebase } = props;
+    const { list, collectionFirebase, disabled = false } = props;
     const history = useHistory();
     const {makeSortable} = useSortable();
     const {desktop} = useDevice();
@@ -26,7 +26,7 @@ export default function List(props) {
     return (
         <OlStyle ref={ref}>
             {
-                list?.length > 0 ? list.map((li, index) => (
+                list?.length > 0 && list.map((li, index) => (
                 <LiStyle key={li.nombre} id={li.nombre} first={index === 0}>
                     <SpanStyle first={index > 0 && index < 4} last={index >= 17}  />
                     <ImgContainer>
@@ -40,14 +40,13 @@ export default function List(props) {
                             height={desktop ? '3rem': '2.3rem'}
                             size={desktop ? '1.1rem' :'.8rem'}
                             icon={desktop ? '24px' :'16px'}
+                            disabled={disabled}
                         >
                             Ver Artista
                         </Button>
                     </DivButton>
                 </LiStyle>
-                ))
-                    :
-                    "cargando"
+                ))  
             }
 
         </OlStyle>

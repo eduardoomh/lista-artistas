@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const OlStyle  = styled.ol`
   list-style: none;
   margin-left: 2rem;
   padding-bottom: 2rem;
+  
 
   @media (min-width: 1000px){
         margin-top: 4rem;
@@ -21,6 +22,8 @@ export const LiStyle = styled.li`
     width: 100vw;
     height: 5rem;
     margin-bottom: 1.5rem;
+    transition: .3s;
+    animation: first 5s ease-in-out 0.5s 12 backwards;
 
     &::before {
         content: counter(my-counter) " ";
@@ -46,6 +49,105 @@ export const LiStyle = styled.li`
     @media (min-width: 1100px){
         width: 30rem;
     }
+
+    ${props => props.down && css`
+        animation: lista 6s ease-in-out 0.5s infinite backwards;
+
+        @keyframes lista {
+            10%{
+                background-color: white;
+                transform: translateY(0);
+            }
+            30%{
+                background-color: white;
+                transform: translateY(0);
+            }
+            50%{
+                background-color: white;
+                transform: translateY(105px);
+            }
+            70%{
+                background-color: white;
+                transform: translateY(207px);
+            }
+            90%{
+                background-color: white;
+                transform: translateY(309px);
+               
+            }
+            100%{
+                 background-color: var(--fourth);
+            }
+        }
+    `}
+
+    
+    ${props => props.first && css`
+        animation: first 6s ease-in-out 0.5s infinite backwards;
+
+        @keyframes first {
+            10%{
+                transform: translateY(0);
+            }
+            30%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-105px);
+            }
+
+            90%{
+                transform: translateY(-105px);
+            }
+        }
+    `}
+
+    ${props => props.second && css`
+        animation: second 6s ease-in-out 0.5s infinite backwards;
+
+        @keyframes second {
+            10%{
+                transform: translateY(0);
+            }
+            30%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(0);
+            }
+            70%{
+                transform: translateY(-105px);
+            }
+
+            90%{
+                transform: translateY(-105px);
+            }
+        }
+    `}
+
+    ${props => props.third && css`
+        animation: third 6s ease-in-out 0.5s infinite backwards;
+
+        @keyframes third {
+            10%{
+                transform: translateY(0);
+            }
+            30%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(0);
+            }
+            70%{
+                transform: translateY(0);
+            }
+
+            90%{
+                transform: translateY(-105px);
+            }
+        }
+    `}
+
 `;
 
 export const DivCircle = styled.div`
@@ -54,6 +156,8 @@ export const DivCircle = styled.div`
     height: 3.5rem;
     border-radius: 50%;
     background-color: var(--fifth);
+    background-image: ${props => props.img ? `url(${props.img})`  : 'none'};
+    background-size: 3.5rem;
 
     @media (min-width: 1000px){
         width: 3rem;
@@ -64,6 +168,7 @@ export const DivCircle = styled.div`
         width: 3.5rem;
         height: 3.5rem;
     }
+
 `;
 
 export const DivStyle = styled.div`

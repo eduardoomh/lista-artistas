@@ -6,6 +6,7 @@ import ParagrahpStyle from "components/reusableStyles/ParagraphStyle";
 import List from "components/Lists/List";
 import PreviousPage from "components/reusable/PreviousPage";
 import Symbology from "components/Lists/Symbology";
+import {fakeList} from "./FakeData";
 import { MainContainerStyle, DivContainer } from "./styles";
 
 export default function MasterList() {
@@ -38,6 +39,15 @@ export default function MasterList() {
                 list?.length > 0 && (
                     <List
                         list={list}
+                        collectionFirebase={collectionFirebase}
+                    />
+                ) 
+            }
+            {
+                list?.length === 0 && (
+                    <List
+                        list={fakeList}
+                        disabled={true}
                         collectionFirebase={collectionFirebase}
                     />
                 )
