@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap');
 
 .App {
-  background-color: var(--primary);
+  background-color: var(--ninth);
   min-height: 100vh;
   font-family: 'Source Serif Pro', serif;
 }

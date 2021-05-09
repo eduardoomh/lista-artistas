@@ -19,11 +19,12 @@ export const DivMainContainer = styled.div`
 
 export const TextStyle = styled.p`
     color: var(--sixth);
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem;
 
     @media (min-width: 1000px){
         margin: 0 2rem 0 0;
+        font-size: 2rem;
     }
 `;
 

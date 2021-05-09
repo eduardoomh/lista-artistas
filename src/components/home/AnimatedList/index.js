@@ -8,7 +8,7 @@ export default function AnimatedList() {
             <LiStyle down>
                 <DivCircle img={artistas.kailee_morgue} />
                 <DivStyle>
-                    <DivRectangle />
+                    <DivRectangle short/>
                     <DivRectangle />
                 </DivStyle>
             </LiStyle>
@@ -16,7 +16,7 @@ export default function AnimatedList() {
             <LiStyle first>
                 <DivCircle img={artistas.terror_jr} />
                 <DivStyle>
-                    <DivRectangle />
+                    <DivRectangle short/>
                     <DivRectangle />
                 </DivStyle>
             </LiStyle>
@@ -24,7 +24,7 @@ export default function AnimatedList() {
             <LiStyle second>
                 <DivCircle img={artistas.sara_diamond}/>
                 <DivStyle>
-                    <DivRectangle />
+                    <DivRectangle short/>
                     <DivRectangle />
                 </DivStyle>
             </LiStyle>
@@ -32,7 +32,7 @@ export default function AnimatedList() {
             <LiStyle third>
                 <DivCircle img={artistas.grae} />
                 <DivStyle>
-                    <DivRectangle />
+                    <DivRectangle short/>
                     <DivRectangle />
                 </DivStyle>
             </LiStyle>

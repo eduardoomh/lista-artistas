@@ -55,23 +55,23 @@ export const LiStyle = styled.li`
 
         @keyframes lista {
             10%{
-                background-color: white;
+                background-color: var(--third);
                 transform: translateY(0);
             }
             30%{
-                background-color: white;
+                background-color: var(--third);
                 transform: translateY(0);
             }
             50%{
-                background-color: white;
+                background-color: var(--third);
                 transform: translateY(105px);
             }
             70%{
-                background-color: white;
+                background-color: var(--third);
                 transform: translateY(207px);
             }
             90%{
-                background-color: white;
+                background-color: var(--third);
                 transform: translateY(309px);
                
             }
@@ -179,17 +179,17 @@ export const DivStyle = styled.div`
 `;
 
 export const DivRectangle = styled.div`
-    width: 15rem;
+    width: ${props => props.short ? "8rem" : "15rem"};
     height: 1.2rem;
     margin: .4rem 1.5rem;
-    background-color: var(--eighth);
+    background-color: var(--sixth);
 
     @media (min-width: 1000px){
-        width: 13rem;
+        width:  ${props => props.short ? "8rem" : "13rem"};
         height: 1rem;
     }
 
     @media (min-width: 1100px){
-        width: 20rem;
+        width:  ${props => props.short ? "8rem" : "20rem"}
     }
 `;
