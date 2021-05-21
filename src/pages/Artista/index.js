@@ -34,7 +34,7 @@ export default function Artista() {
             findArtistContext(artistName, list)
             console.log("hola");
             console.log("prueba de credenciales");
-            
+            console.log("prueba de credenciales");
    
         }
 
