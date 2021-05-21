@@ -33,6 +33,7 @@ export default function Artista() {
         if(list.length > 0 ){
             findArtistContext(artistName, list)
             console.log("hola");
+            console.log("prueba de credenciales");
             
    
         }
